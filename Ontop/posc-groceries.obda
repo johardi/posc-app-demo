@@ -16,5 +16,52 @@ password
 driverClass	org.h2.Driver
 
 [MappingDeclaration] @collection [[
+mappingId	Fudge Mint Cookies
+target		:{UPCA} a :BackToNatureFudgeMintCookiesItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Back To Nature Fudge Mint Cookies'
+
+mappingId	Biscoff Cookies
+target		:{UPCA} a :LotusBiscoffCookiesItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Lotus Biscoff Cookies'
+
+mappingId	Walkers Shortbread
+target		:{UPCA} a :WalkersShortbreadItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Walkers Shortbread'
+
+mappingId	Safeway Store
+target		:{STORE_ID} a :Safeway ; :storeName {STORE_NAME} ; :address {STORE_ADDRESS} ; geo:lat {LAT} ; geo:lon {LON} . 
+source		select * from STORE where STORE_BRAND = 'Safeway'
+
+mappingId	Whole Foods Store
+target		:{STORE_ID} a :WholeFoods ; :storeName {STORE_NAME} ; :address {STORE_ADDRESS} ; geo:lat {LAT} ; geo:lon {LON} . 
+source		select * from STORE where STORE_BRAND = 'Whole Foods'
+
+mappingId	Costco Store
+target		:{STORE_ID} a :Costco ; :storeName {STORE_NAME} ; :address {STORE_ADDRESS} ; geo:lat {LAT} ; geo:lon {LON} . 
+source		select * from STORE where STORE_BRAND = 'Costco'
+
+mappingId	Familia Swiss Muesli
+target		:{UPCA} a :FamiliaSwissMuesliMixedCerealsItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Familia Swiss Muesli Mixed Cereals'
+
+mappingId	General Mills Cheerios
+target		:{UPCA} a :GeneralMillsCheeriosItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'General Mills Cheerios'
+
+mappingId	Kashi Crunch Chip Bar
+target		:{UPCA} a :KashiCrunchChocolateChipBarItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Kashi Crunch Chocolate Chip Bar'
+
+mappingId	Mallomars Cookies
+target		:{UPCA} a :MallomarsCookiesPureChocolateItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Mallomars Cookies Pure Chocolate'
+
+mappingId	Pepperidge Macademia Cookies
+target		:{UPCA} a :PepperidgeFarmTahoeWhiteChocolateMacademiaCookiesItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Pepperidge Farm Tahoe White Chocolate Macademia Cookies'
+
+mappingId	Heinz Beans
+target		:{UPCA} a :HeinzBeansWithTomatoSauceItem ; :productName {GROCERY_ITEM} ; :price {PRICE} ; :isSoldByStore :{STORE_ID} . 
+source		select * from CATALOG where GROCERY_ITEM = 'Heinz Beans with Tomato Sauce'
 ]]
 
